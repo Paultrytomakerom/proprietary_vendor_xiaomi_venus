@@ -83,10 +83,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/venus/proprietary/vendor/etc/camera/xiaomi/thirdpartydualbokehyuvsnapshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/thirdpartydualbokehyuvsnapshot.json \
     vendor/xiaomi/venus/proprietary/vendor/etc/camera/xiaomi/thirdpartyjpegsnapshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/thirdpartyjpegsnapshot.json \
     vendor/xiaomi/venus/proprietary/vendor/etc/camera/xiaomi/thirdpartysnapshot.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/xiaomi/thirdpartysnapshot.json \
-    vendor/xiaomi/venus/proprietary/vendor/etc/display/DPU660.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU660.xml \
-    vendor/xiaomi/venus/proprietary/vendor/etc/display/DPU670.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU670.xml \
-    vendor/xiaomi/venus/proprietary/vendor/etc/display/DPU7__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU7__.xml \
-    vendor/xiaomi/venus/proprietary/vendor/etc/display/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml \
     vendor/xiaomi/venus/proprietary/vendor/etc/elliptic_sensor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/elliptic_sensor.xml \
     vendor/xiaomi/venus/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/xiaomi/venus/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
@@ -333,6 +329,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/venus/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin
 
 PRODUCT_PACKAGES += \
+    libbitmlengine \
+    libcamera_nn_stub \
     libcamxexternalformatutils \
     libcamxfacialfeatures \
     libcamxfdalgo \
@@ -351,6 +349,10 @@ PRODUCT_PACKAGES += \
     libmmcamera_faceproc2 \
     libmmcamera_lscv35 \
     libmmcamera_mfnr \
+    libofflinelog \
+    libopencv \
+    vendor.xiaomi.hardware.cameraperf@1.0-impl \
+    vendor.xiaomi.hardware.cameraperf@1.0 \
     audio.primary.lahaina \
     liba2dpoffload \
     libacdb-fts \
@@ -539,11 +541,9 @@ PRODUCT_PACKAGES += \
     libarcsoft_super_night_raw \
     libarcsoft_triple_sat \
     libarcsoft_triple_zoomtranslator \
-    libbitmlengine \
     libblink \
     libc++_shared \
     libcamera_dirty \
-    libcamera_nn_stub \
     libcamera_scene \
     libcamerapostproc \
     libcapiv2svacnn \
@@ -581,12 +581,11 @@ PRODUCT_PACKAGES += \
     libmibokeh_855 \
     libmibokeh_mask_dsp \
     libmiphone_preview_bokeh \
+    libmm-color-convertor \
     libmpbase \
     libnanopb \
     libnotifyaudiohal \
     libofflinedump \
-    libofflinelog \
-    libopencv \
     libopestriping \
     libos \
     libqll10 \
@@ -626,8 +625,6 @@ PRODUCT_PACKAGES += \
     sensors.ssc \
     sensors.touch.detect \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
-    vendor.xiaomi.hardware.cameraperf@1.0-impl \
-    vendor.xiaomi.hardware.cameraperf@1.0 \
     vendor.xiaomi.hardware.campostproc@1.0-service-impl \
     vendor.xiaomi.hardware.campostproc@1.0 \
     vendor.xiaomi.hardware.citsensorservice@1.0 \
